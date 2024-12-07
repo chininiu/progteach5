@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="profile_page.css">
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+        </script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+        </script>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <link rel="icon" type="image/x-icon" href="PT_LOGO.png">
+        <title>
+            Profile | ProgTeach
+        </title>
+    </head>
+
+    <body>
+        
+         <!--SIDEBARRRRRRRRRRRR-->
+         <div class =></div>
+         <nav class="sidebar close">
+             <header>
+                 <div class="img-text">
+                     <span class="image">
+                         <img src="PT_LOGO.png" alt="Logo">
+                     </span>
+ 
+                     <span class="text">
+                         <div class="title">
+                             <p class="prog">Prog</p>
+                             <p class="teach">Teach</p>
+                         </div>     
+                     </span>
+                     
+                 </div>     
+                 <ion-icon name="chevron-forward-outline" class="toggle"></ion-icon>   
+             </header>
+ 
+             <div class="menu-bar">
+                 <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-links">
+                            <a href="../PROFILE_PAGE/profile_page.html">
+                                <ion-icon name="person-circle" class="icon"></ion-icon>
+                                <span class="text nav_text">My Account</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="menu-links">
+                        <li class="nav-links">
+                            <a href="../HOME_PAGE(Logged)/home_page-logged.html">
+                                <ion-icon name="home" class="icon"></ion-icon>
+                                <span class="text nav_text">Home</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="menu-links">
+                        <li class="nav-links">
+                            <a href="../SERVICE_PAGE/landing_page.html">
+                                <ion-icon name="cart" class="icon"></ion-icon>
+                                <span class="text nav_text">Services</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="menu-links">
+                        <li class="nav-links">
+                            <a href="../ABOUT_PAGE/about_page.html">
+                                <ion-icon name="help-circle-outline" class="icon"></ion-icon>
+                                <span class="text nav_text">About</span>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="bottom_content">
+                    <li class="nav-links">
+                        <a href="../LOGIN_PAGE/Login_page.html">
+                            <ion-icon name="log-out-outline" class="icon"></ion-icon>
+                            <span class="text nav_text">Logout</span>
+                        </a>
+                    </li>
+                     <li class="mode">
+                         <div class="moon-sun">
+                             <ion-icon name="sunny-outline" class="i sun icon"></ion-icon>
+                             <ion-icon name="moon-outline" class="i moon icon"></ion-icon>
+                         </div>
+                         <span class="mode-text text">Dark Mood</span>
+ 
+                         <div class="toggle-switch">
+                             <span class="switch"></span>
+                         </div>
+                     </li>
+                 </div>
+             </div>
+         </nav>
+         <!--END_SIDEBARRRRRRRRRRRR-->
+
+
+         <!--SHEP ANIMASYON-->
+        <section class="home">
+
+            <div class="account_container">
+                
+                <div class="profile-head">
+                    <span class="profile-header">Account Information</span>
+                </div>
+
+
+                <div class="information-container">
+                    <div class="personal-info">
+                        <p>Username: <span id="user-title">ifdsma</span></p>
+                        <p>Email Address: <span id="email-title">fdaf</span></p>
+                        <p>Password: <span id="password-title">pass</span></p>
+                    </div>
+    
+                    <div class="others-container">
+                        <div class="other-info">
+                            <div class="other1">
+                                <p>Theme</p>  
+                                <p id="language-title">Language</p>
+    
+                            </div>
+        
+                            <div class="other2">
+        
+                                <button id="mode-switch">mode</button>
+                                <button id="language-option" >English</button>
+                                <p style="font-size: 1vw;">*only current available language is English</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </section>
+        <script src="landing_page.js"></script>
+    </body>
+
+
+    <script src="profile_page.js">
+    </script>
+</html>

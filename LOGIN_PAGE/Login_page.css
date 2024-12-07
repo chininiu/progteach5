@@ -1,0 +1,297 @@
+
+                *
+                {
+                  padding:0;
+                  margin:0;
+                  box-sizing: border-box;
+                  font-family: "Poppins";
+             
+
+                }
+                body
+                {
+                    
+                    background: radial-gradient(circle, rgba(150,36,172,1) 0%, rgba(108,19,113,1) 50%, rgba(71,36,138,1) 100%);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-attachment: fixed;
+                    background-size: cover; 
+                    min-height: 100vh;
+                    background-size: 400% 400%;
+                    background-position: center;
+                    animation-name: bg;
+                    animation-timing-function: ease;
+                    animation-iteration-count: infinite;
+                    animation-duration: 10s;
+                    animation-direction: alternate;
+                    
+                }
+
+                #shapes_animated div
+                {
+                    background-color: none;
+                    border: 6px solid white;
+                    width: 60px;
+                    height: 60px;
+                    position:absolute;
+                    z-index: 1;
+                }
+                #shapes_animated div:nth-child(1)
+                {
+                    
+                    border-radius:50% 50% 50% 50%;
+                    top:12%;
+                    left:42%;
+                    animation: animate 10s linear infinite
+                }
+                #shapes_animated div:nth-child(2)
+                {
+                    top:50%;
+                    left:34%;
+                    animation: animate 7s linear infinite
+                }
+                #shapes_animated div:nth-child(3)
+                {
+                    top:43%;
+                    left:90%;
+                    animation: animate 5s linear infinite
+                }
+                #shapes_animated div:nth-child(4)
+                {
+                    
+                    border-radius:50% 50% 50% 50%;
+                    top:76%;
+                    left:10%;
+                    animation: animate 8s linear infinite
+                }
+                #shapes_animated div:nth-child(5)
+                {
+                    top:84%;
+                    left:20%;
+                    animation: animate 8s linear infinite
+                }
+                #shapes_animated div:nth-child(6)
+                {
+                    top:34%;
+                    left:24%;
+                    animation: animate 6s linear infinite
+                }
+                #shapes_animated div:nth-child(7)
+                {
+                    border-radius:50% 50% 50% 50%;
+                    top:80%;
+                    left:65%;
+                    animation: animate 9s linear infinite
+                }
+                #shapes_animated div:nth-child(8)
+                {
+                    top:35%;
+                    left:76%;
+                    animation: animate 9s linear infinite
+                }
+                #shapes_animated div:nth-child(9)
+                {
+                    top:43%;
+                    left:10%;
+                    animation: animate 9s linear infinite
+                }
+                #shapes_animated div:nth-child(10)
+                {
+                    top:21%;
+                    left:52%;
+                    animation: animate 9s linear infinite
+                }
+                @keyframes animate
+                {
+                    0%
+                    {
+                        transform: scale(0) TranslateY(0) rotate(0);
+                        opacity:1;
+                    }
+                    100%
+                    {
+                        transform: scale(1.4) TranslateY(-90px) rotate(360deg);
+                        opacity:0;
+                    }
+                }
+                .container_form
+                {
+
+                    color: white;
+                    position:absolute;
+                    height:75%;
+                    width: 30%;
+                    border-radius: 20px;
+                    border:1px solid white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    backdrop-filter: blur(20px);
+                    transition:3s;
+                    overflow:hidden;
+                }
+                .container_form h1
+                {
+                    font-size: 2em;
+                    text-align: center;
+                    margin-bottom: 5vh;
+                }
+                .input input
+                {
+                    padding: 1em;
+                    height: 5vh;
+                    width:20vw;
+                    border-radius: 7px;
+                    background:white;
+                   border:none;
+                   outline:none;
+                   margin-bottom: 2em;
+                }
+                a
+                {
+                    color: white
+                }
+                .icon
+                {
+                    position: absolute;
+                    font-size: 1em;
+                    transform: translateX(-30px) translateY(10px) scale(1.5);    
+                }
+                .input
+                {
+                    width: 100%;
+                }
+                .rememberme
+                {
+                    margin-bottom: 1vh
+                }
+                
+                #submit-login
+                {   
+                    text-align: center;
+                    padding:2vh;
+                    border:1px solid white;
+                    outline:none;
+                    border-radius: 40px;        
+                    width: 100%;
+                    font-size: 1em;
+                    font-weight:300;
+                    margin-bottom: 4vh;
+                    transition: .8s ease;
+                    margin-top:3%;
+                }
+
+                #submit-login:hover
+                {   
+                    padding:2vh;
+                    border:1px solid white;
+                    background: none;
+                    color: white;
+                }
+                #submit-reg
+                {   
+                    text-align: center;
+                    padding:2vh;
+                    border:1px solid white;
+                    border-radius: 40px;        
+                    width: 100%;
+                    font-size: 1em;
+                    font-weight:300;
+                    margin-bottom: 4vh;
+                    transition: .8s ease;
+                    margin-top: 3%;
+                }
+                #submit-reg:hover
+                {
+                    padding:2vh;
+                    border:1px solid white;
+                    background: none;
+                    color: white;
+                }
+                .donthaveacc p
+                {
+                    font-size: 15px;
+                    text-align: center;
+                }
+                #circle
+                {
+                    position:absolute;
+                    height:100vh;
+                    width: 100vw;
+                    background-color: black;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    opacity:0;
+                    transition:2s
+                }
+
+                .container_form .login_form
+                {
+                    transform: translateX(50%);
+                    position: relative;
+                    transition: .5s ease;
+                }
+                
+           
+                .container_form .register_form
+                {
+                    position: relative;
+                    transform: translateX(100%);
+        
+                    transition: .5s ease;
+           
+                }
+
+                .container_form.switch  .login_form
+                {
+                    position: relative;
+   
+                   transform: translateX(-100%);
+                }
+           
+                .container_form.switch .register_form
+                {
+                    position: relative;
+                    transform: translateX(-50%);
+                    display: block;
+                    transition: .5s ease;
+                }
+
+                .container_form #back
+                {
+                    font-size: 2vw;
+                    position: absolute;
+                    top:2%;
+                    right:8%;
+                }
+
+/*Animations*/       
+  @keyframes bg
+  {
+      0%
+      {
+          background-position: 0% 100%;
+      }
+  
+      30%
+      {
+          background-position: 20% 60%;
+      }
+  
+      50%{
+          background-position: 100% 100%;
+      }
+      70%
+      {
+          background-position: 50% 50%;
+      }
+  
+      100%{
+          background-position: 100% 0%;
+      }
+  }

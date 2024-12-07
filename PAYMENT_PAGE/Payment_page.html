@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Payment_page.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <title>Payment</title>
+        <link rel="icon" type="image/x-icon" href="PT_LOGO.png">
+    </head>
+    <body>
+        <ion-icon name="close" id="back"></ion-icon>
+        <div class="payment-page-container">
+     
+            <div class="payment-out-box">
+                <span class="payment-text">
+                    Payment
+                </span>
+        
+                <div class="product-info">
+                    <span id="payment-course">service name</span>
+                    <span id="payment-price">price</span>
+                </div>
+        
+                <!--payment method-->
+        
+                <div class="payment-methods">
+                    <p>Select Payment Method:</p>
+                    
+                    <div class="methods-container">
+                        <div id="card-method">
+                            <img src="credit-card.png" style="width: 9%;">
+                            <span>Card</span>
+                        </div>
+            
+                        <div id="ewallet-method">
+                            <img src="paypal.png">
+                            <span>E-Wallet</span>
+                        </div>
+                    </div>
+
+                </div>
+        
+                <!--payment method-->
+            </div>
+    
+            <!--invoice card-->
+    
+            <div class="invoice-container">
+
+                    <span class="invoice-start">Select a payment method first.</span>
+    
+                <div class="invoice-container-content">
+                    <div id="payment-method-name">
+                        <p>Pay with <span id="payment-method-name-specific">----</span> </p>
+                    </div>
+        
+                    <form action="payment_succesful.html" class="invoice-form-container">
+                        <div>
+                            <div>
+                                <label for="invoice-first" id="invoice-first">Card Number</label>
+                                <input type="text" id="invoice-first-input" name="payment-number" required>
+                            </div>
+                        </div>
+            
+                        <div>
+                            <label for="invoice-second" id="invoice-second">Cardholder Name</label>
+                            <input type="text" id="invoice-second-input" name="payment-email">
+                        </div>
+            
+                        <div class="invoice-other">
+                            <div>
+                                <label for="invoice-third">Expiry Date</label>
+                                <input type="text" id="invoice-third-input" name="expiry-date" placeholder="MM/YY">
+                            </div>
+                
+                            <div>
+                                <label for="invoice-fourth" id="invoice-fourth-label">CVC</label>
+                                <input type="text"  id="invoice-fourth-input" name="cvc" >
+                            </div>
+                        </div>
+                        
+                            <div class="invoice-submit">
+                                <button class="button-pay" type="submit">Pay</button>
+                            </div>
+
+    
+                    </form>
+                </div>
+    
+            </div>
+    
+            <!--invoice card-->
+
+        </div>
+
+
+        <script src="landing_page.js"></script>
+
+        <script>
+
+            $(".invoice-container-content").children().hide();
+
+            $("#card-method").click(function() {
+                $(".invoice-container-content").children().show();
+                $(".invoice-other").children().show();
+                $("#invoice-first").text("Card Number");
+                $("#invoice-second").text("Cardholder Name");
+                $(".invoice-start").hide();
+                $("#payment-method-name-specific").text("Card");
+            });
+
+            $("#ewallet-method").click(function() {
+                $(".invoice-container-content").children().show();
+                $(".invoice-other").children().css({"display" : "none"});
+                $("#invoice-first").text("Phone Number");
+                $("#invoice-second").text("Email");
+                $(".invoice-start").hide();
+                $("#payment-method-name-specific").text("E-Wallet");
+            }); 
+    
+    
+            $("#payment-price").text(localStorage.getItem('price'))
+            $("#payment-course").text(localStorage.getItem('bundle'))
+            $("#back").click(function()
+            {
+                window.location.href="../SERVICE_PAGE/landing_page.html"
+            })
+
+
+if (localStorage.getItem("check") == "true")
+{
+    $("body").addClass("dark");
+}
+else 
+{
+    $("body").removeClass("dark");
+}
+
+        </script>
+
+    </body>
+</html>
