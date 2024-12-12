@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*
+{
+font-family: 'poppins';
+margin:0;
+padding:0;
+scroll-behavior:smooth;
+}
+
+
+:root
+{
+    --body-color: #E4E9F7;
+    --sidebar-color: #fff;
+    --primary-color:#695cfe;
+    --primary-color-light: #f6f5ff;
+    --toggle-color:#DDD; 
+    --text-color:#707070;
+    --text-content: #44334b;
+    --product-color:#ffffff;
+    --buy-background: #ffffff;
+    --lessons-background: #ffffff;
+    --surface-shadow: hsl(0, 0%, 100%, 0.5);
+    --gradient-background: rgb(229,45,216);
+    --gradient-background2: linear-gradient(101deg, rgba(229,45,216,1) 23%, rgba(90,113,253,1) 50%, rgba(144,30,230,1) 82%);    
+    --color-bg1: rgb(108, 0, 162);
+    --color-bg2: rgb(0, 17, 82);
+    --background-purple-gradient: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    --trans-2s: all .2s ease;
+    --trans-3s: all .3s ease;
+    --trans-4s: all .4s ease;
+    --trans-5s: all .5s ease;
+
+    --anim-3s: animate 8s linear infinite;
+    --anim-4s: animate 9s linear infinite;
+    --anim-5s: animate 7s linear infinite;
+    --anim-6s: animate 6s linear infinite;
+}
+
+.sidebar.close{
+    width: 5vw;
+}
+
+
+
+body
+{
+    height: 230%;
+    transition: var(--trans-4s);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background:var(--background-purple-gradient);
+}
+body.dark 
+{
+    --background-purple-gradient: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    --color-bg1: rgba(63, 17, 113);
+    --color-bg2: rgba(8, 17, 60);
+    --body-color: #181918;
+    --sidebar-color: #242526;
+    --primary-color:#3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color:#fff;
+    --text-color:#ffffff;
+    --text-content: #ffffff;
+    --product-color:#3a3b3c;
+    --buy-background: #31313f;
+    --lessons-background: #444452;
+    --surface-shadow: hsla(177, 55%, 47%, 0.3);
+    --gradient-background: rgb(179,1,167);
+    --gradient-background2: linear-gradient(101deg, rgba(72,8,51,1) 23%, rgba(1,17,76,1) 50%, rgba(64,5,74,1) 81%);
+}
+
+.sidebar
+{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 15vw;
+    background-color: var(--sidebar-color);
+    padding: 2vh 1vw;
+    transition:var(--trans-5s);
+    z-index:100;
+  
+}
+
+.sidebar.close .text{
+    opacity: 0;
+
+}
+.sidebar .menu-bar
+{
+    height:calc(100% - 12%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.text
+{
+    color:var(--text-color);
+    font-size: 1vw;
+    transition: var(--trans-2s);
+    white-space: nowrap;
+    opacity:1;
+}
+.sidebar li
+{
+    height:10vh;
+    margin-top:2vh;
+    list-style: none;
+    display:flex;
+    align-items: center;
+    font-size:1.3vw;
+}
+.sidebar header
+{
+    position:relative;
+}
+ .sidebar .img-text .image img
+{
+    width: 4vw;
+    border-radius: 1vh;
+    
+}
+.sidebar .img-text .image
+{
+    min-width: 5vw;
+    display: flex;
+    align-items: center;
+}
+.sidebar header .text .title
+{
+    font-size: 1.5vw ;
+    font-weight: 500;
+}
+.sidebar header .img-text
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.sidebar .prog
+{
+    color:#695cfe;
+}
+.sidebar .teach
+{
+    color:var(--text-color)
+}
+.sidebar .title
+{
+    display: flex;
+    flex-direction: row;
+}
+.sidebar .toggle
+{
+    position:absolute;
+    right:-1.9vw;
+    top: 50%;
+    transform: rotate(180deg) translateY(50%);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vw;
+    transition: var(--trans-3s);
+}
+.sidebar.close .toggle
+{
+   
+  transform: translateY(-50%);;
+}
+
+.sidebar li a
+{
+    height: 100%;
+    width: 100%;
+    text-decoration: none ;
+    display: flex;
+    align-items: center;
+    transition: var(--trans-2s);
+    border-radius: 3vh;
+}
+.sidebar li :hover .text,
+.sidebar li a:hover .icon{
+    color: var(--text-color);
+}
+
+.sidebar li a:hover
+{
+    background-color: var(--primary-color-light);
+    color:var(--text-color)
+}
+.sidebar li .icon
+{
+    display: flex;
+    justify-content: center;
+    min-height: 3.5vh;
+    min-width: 4.5vw;
+    color:var(--text-color);
+    transition:var(--trans-2s)
+    
+}
+
+.sidebar .icon
+{
+    font-size: 0.7vw;
+}
+
+.sidebar li .text
+{
+    transition:var(--trans-2s)
+}
+
+.menu-bar .mode
+{
+
+    position:relative;
+    background-color: var(--primary-color-light);
+    border-radius: 1vh;
+    transition: var(--trans-5s);
+}
+.menu-bar .mode .moon-sun
+{
+    height: 5vh;
+    width:4vw;
+    display:flex;
+    align-items: center;
+
+}
+.menu-bar .mode .moon-sun .sun
+{
+    opacity: 0;
+    transition: var(--trans-2s);
+}
+
+body.dark .menu-bar .mode .moon-sun .sun
+{
+    opacity: 1;
+    
+}
+
+body.dark .menu-bar .mode .moon-sun .moon
+{
+    opacity: 0;
+    transition: var(--trans-2s);
+    
+}
+.menu-bar .mode .i
+{
+    position:absolute;
+
+}
+.menu-bar .mode .toggle-switch
+{
+    
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    min-width:5vw;
+    cursor:pointer;
+    position:absolute;
+}
+.toggle-switch .switch
+{
+    position: relative;
+    height:3vh;
+    width: 3.5vw;
+    border-radius:3vh;
+    background:var(--toggle-color)
+}
+.switch::before
+{
+    content: '';
+    height: 2vh;
+    width: 1vw;
+    border-radius: 50%;
+    background: var(--primary-color-light);
+    position:absolute;
+    top:50%;
+    left:.5vw;
+    transform: translateY(-50%);
+    transition: var(--trans-2s);
+}
+
+body.dark .switch::before
+{
+    left:2.1vw;
+}
+
+.home 
+{
+    position:relative;
+    height: 100vh;
+    left:17%;
+    width: calc(83%);
+    transition: var(--trans-5s);
+}
+.home .text
+{
+    font-size: 2vw;
+}
+.sidebar.close ~ .home
+{
+    left:7%;
+    width: calc(93%);
+}
+
+
+.home
+{
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+   
+
+}
+
+.title-service
+{
+display: flex;
+flex-direction: row;
+top:3%;
+position:absolute;
+width: 100%;
+height: 10%;
+justify-content: center;
+text-align: center;
+color: white;
+font-size: 4vh;
+
+}
+.products-section
+{
+    z-index: 99;
+    position: absolute;
+    top: 10%;
+    height: fit-content;
+    width: 100%;
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+
+}
+
+
+
+
+
+.home .product 
+{
+    position: relative;
+    top: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: baseline;
+    gap: 2vw;
+    flex-direction: row;
+    
+}
+
+
+.home .product div
+{
+    overflow: hidden;
+    width: 35vw;
+    height: 80vh;
+    border-radius: 4vh;
+    background-color: var(--product-color);
+    transition: .8s;
+}
+
+.product div:first-child {
+    margin-right: 4%;
+}
+
+@keyframes appear
+{
+    from
+    {
+        opacity:0;
+        scale: 0.9;
+    }
+    to
+    {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.hidden
+{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.product h1 {
+    color: var(--text-color);
+    font-size: 5vw;
+    padding-left: 5%;
+}
+
+
+.product img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: 0 0%;
+}
+
+.csharp-product-container {
+    width: 93%;
+    height: fit-content;
+    background-color: var(--background-product);
+    border-radius: 6vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap:10%;
+}
+
+.csharp-product-container .lesson-images
+{
+    width:40%;
+    height: auto;
+    border-radius: 3vh;
+}
+.csharp-product-container #language-name {
+    position: relative;
+    top: 3%;
+    left: 3%;
+    font-size: 7vw;
+    font-weight: bold;
+    color: var(--text-content);
+}
+
+.csharp-product-container .language-description {
+    width: 40%;
+    overflow-wrap: break-word;
+    height: fit-content;
+    position: relative;
+    top: 3%;
+    left: 6%;
+    font-size: 1.7vw;
+    color: var(--text-content);
+}
+
+.csharp-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.csharp-background .buy {
+    width: 27%;
+    height: 40vh;
+    border-radius: 2vw;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    background-color: var(--buy-background);
+    padding: 4%;
+    box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.329);
+}
+
+.csharp-background .buy p {
+    position: relative;
+    font-size: 1.5vw;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.csharp-background .buy button {
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0%;
+    width: 100%;
+    padding: 4%;
+    margin-top: 5%;
+    font-size: 1.3vw;
+    font-weight: 500;
+    border-radius: 2vw;
+    border: 1.3vw;
+    background-color: #695cfe;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s ease;
+    font-weight: bold;
+
+}
+
+
+.csharp-background .buy button:hover {
+    background:#a198ff;
+    transition: .2s ease;
+    color: #44334b;
+}
+
+.csharp-include-container {
+    margin-top: 4%;
+    color: var(--text-color);
+    z-index: 100;
+}
+
+#surface-1 {
+    background-color: var(--buy-background);
+    width: 100%;
+    height: fit-content;
+    color: var(--text-color);
+    transition: .9s ease;
+    display: none;
+    z-index: -100;
+    animation-name: display-out;
+    animation-duration: 1s;
+}
+
+#surface-1.show-lessons-C {
+    background-color: var(--buy-background);
+    width: 100%;
+    height: fit-content;
+    color: var(--text-color);
+    transition: .9s ease;
+    display: block;
+    animation-name: display;
+    animation-duration: 1s;
+    z-index: -100;
+}
+
+@keyframes display {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+
+    }
+}
+
+
+.csharp-include-container #surface-1 .lesson {
+    padding: 5%;
+    padding-bottom: 10%;
+    
+}
+
+.linebreak
+{
+  height: .1vh;
+  background-color: white;
+  width: 80vw;
+  display: flex;
+  justify-self: center;
+}
+
+#click-text-include{
+    display: flex;
+    justify-self: right;
+    padding: 2vh;
+    margin: 0;
+    font-size: 3.5vh;
+    box-sizing: border-box;
+    justify-content: center;
+    border-radius: 10vh;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    right:14vw;
+    transform: translateY(-12vh);
+    background-color: var(--buy-background);
+    transition: .3s ease;
+}
+
+#click-text-include:hover
+{
+   background-color:rgb(189, 189, 189);;
+
+}
+.java-product-container {
+    width: 93%;
+    height: fit-content;
+    background-color: var(--background-product);
+    border-radius: 6vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:10%;
+    align-content: space-between;
+}
+
+.java-product-container  #language-name {
+    position: relative;
+    top: 3%;
+    left: 3%;
+    font-size: 7vw;
+    font-weight: bold;
+    color: var(--text-content);
+}
+
+.lesson-images
+{
+    width:40%;
+    height: auto;
+    border-radius: 3vh;
+
+}
+
+.lesson-images::after
+{
+    content: '';
+    width:100%;
+    height: 100%;
+    background-color: #181818;
+    position: absolute;
+    z-index: 1001;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+    border-radius: 3vh;
+
+}
+
+
+.java-background {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10%; 
+}
+
+.java-background .buy {
+    width: 27%;
+    border-radius: 2vw;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    background-color: var(--buy-background);
+    padding: 4%;
+    box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.329);
+    justify-content: center;
+    align-items: center;
+}
+
+.java-background .buy button:hover {
+    background:#a198ff;
+    transition: .2s ease;
+    color: #44334b;
+}
+
+.java-background .buy p {
+    position: relative;
+    font-size: 1.5vw;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.java-background .buy button {
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0%;
+    width: 100%;
+    padding: 4%;
+    margin-top: 5%;
+    font-size: 1.3vw;
+    font-weight: 500;
+    border-radius: 2vw;
+    border: 1.3vw;
+    background-color: #695cfe;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s ease;
+    font-weight: bold;
+}
+
+
+.java-include-container {
+    margin-top: 4%;
+    color: var(--text-color);
+}
+
+#surface-2 {
+    background-color: var(--buy-background);
+    width: 100%;
+    height: fit-content;    
+    color: var(--text-color);
+    display: none;
+}
+
+#surface-2.show-lesson-java
+{
+    background-color: var(--buy-background);
+    width: 100%;
+    height: fit-content;
+    color: var(--text-color);
+    transition: .9s ease;
+    display: block;
+    animation-name: display;
+    animation-duration: 1s;
+    z-index: -100;
+    
+}
+
+#include-text-2 
+{
+    display: flex;
+    justify-self: left;
+    padding: 2vh;
+    margin: 0;
+    font-size: 3.5vh;
+    box-sizing: border-box;
+    justify-content: center;
+    border-radius: 10vh;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    left:15vw;
+    transform: translateY(-19vh);
+    background-color: var(--buy-background);
+    transition: .5s ease;
+    
+    
+}
+
+#include-text-2:hover
+{
+background-color: rgb(189, 189, 189);
+}
+
+
+.java-include-container #surface-2 .lessons {
+    padding: 5%;
+    padding-bottom: 10%;
+}
+
+
+.lessons {
+    height: 100%;
+    font-size: 1.3vw;
+    columns: 1;
+    column-gap: 0%;
+    overflow-wrap: break-word;
+}
+
+.item {
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1vw;
+    margin-bottom: 3%;
+    break-inside: avoid;
+    width: 100%;
+    background-color: var(--lessons-background);
+}
+
+.surface p {
+    color: var(--text-color);
+}
+
+  
+#C-sharp.product-enlarge {
+    transform: scale(105%);
+    box-shadow: 0px 0px 0px rgba(0, 255, 156, 0.9);
+}
+
+#Java.product-enlarge {
+    transform: scale(105%);
+    box-shadow: 0px 0px 0px rgba(0, 255, 156, 0.9);
+}
+
+#C-sharp.product-shrink {
+    transform: scale(95%);
+}
+
+#Java.product-shrink {
+    transform: scale(95%);
+}
+
+
+/*footer pababa*/
+
+footer
+{
+    width: 100%;
+    padding-top:1%;
+    height: 40%;
+    background-color: #181818;
+    position:relative;
+    bottom: 0%;
+    z-index: 100;
+    color:#cccccc;
+    margin-top: -2%;
+    margin-top: 15%
+}
+footer .logos
+{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap:1%;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+
+footer .check-title
+{
+    font-size: 4vh;
+}
+footer .soc-med
+{
+    font-size: 3vh;
+}
+footer p
+{
+    text-align: center;
+    font-size: 2vh;
+}
+
+footer .descriptioon-footer
+{
+    margin-top: 1%;
+}
+footer .content-footer
+{
+    margin-top: 1%;
+}
+footer .copyright
+{
+    margin-top: 2%;
+}
+
+.foot .followus
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.back-to-top {
+	position: fixed;
+	bottom: 4vh;
+	right: 4vh;
+	align-items: center;
+	justify-content: center;
+	background-color: #695cfe;
+	border-radius: 10vh;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: 0.2s ease-out;
+    display: none;
+    z-index: 999;
+}
+
+.back-to-top span {
+	color: #fff;
+	font-size: 3vw;
+	transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+	background-color: #a198ff;
+}
+.back-to-top:hover span {
+	transform: translateY(-4px);
+}
