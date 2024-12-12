@@ -517,7 +517,7 @@ font-size: 4vh;
 }
 
 .csharp-include-container {
-    margin-top: 4%;
+    margin-top: 7%;
     color: var(--text-color);
     z-index: 100;
 }
@@ -698,7 +698,7 @@ font-size: 4vh;
 
 
 .java-include-container {
-    margin-top: 4%;
+    margin-top: 7%;
     color: var(--text-color);
 }
 
